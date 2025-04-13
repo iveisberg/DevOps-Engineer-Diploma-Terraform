@@ -1,0 +1,18 @@
+version: 3
+projects:
+  - dir: . # Корневая директория проекта
+    workflow: terraform
+    autoplan:
+      enabled: true
+      when_modified:
+        - "*.tf"
+        - "*.tfvars"
+workflows:
+  terraform:
+    plan:
+      steps:
+        - init
+        - plan
+    apply:
+      steps:
+        - apply
