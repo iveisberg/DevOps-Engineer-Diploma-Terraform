@@ -91,7 +91,7 @@ resource "yandex_compute_instance_group" "k8s-worker-nodes" {
     }
 
     scheduling_policy {
-      preemptible = true
+      preemptible = false
     }
   }
 
