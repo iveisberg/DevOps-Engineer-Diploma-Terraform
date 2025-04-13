@@ -163,3 +163,22 @@ variable "k8s-worker-nodes" {
   }
   description = "Resource for VMs"
 }
+
+variable "vms_resources" {
+  type = map(object({
+    cores         = number
+    memory        = number
+    core_fraction = number
+    disk_volume   = number
+  }))
+  default = {
+    vm = {
+      cores = 2,
+      memory = 2,
+      disk_volume = 10,
+      disk_type = "network-hdd",
+      core_fraction = 5
+    }
+  }
+  description = "Resource for VMs"
+}
