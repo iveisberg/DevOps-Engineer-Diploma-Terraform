@@ -17,42 +17,6 @@ resource "yandex_resourcemanager_folder_iam_member" "sa-terraform-editor" {
   ]
 }
 
-# resource "yandex_resourcemanager_folder_iam_member" "sa-terraform-storage-editor" {
-#   folder_id = var.YC_FOLDER_ID
-#   role      = "storage.editor"
-#   member    = "serviceAccount:${yandex_iam_service_account.sa-terraform.id}"
-#   depends_on = [
-#     yandex_iam_service_account.sa-terraform,
-#   ]
-# }
-
-# resource "yandex_resourcemanager_folder_iam_member" "sa-terraform-kms-keys" {
-#   folder_id = var.YC_FOLDER_ID
-#   role      = "kms.keys.encrypterDecrypter"
-#   member    = "serviceAccount:${yandex_iam_service_account.sa-terraform.id}"
-#   depends_on = [
-#     yandex_iam_service_account.sa-terraform,
-#   ]
-# }
-
-# resource "yandex_resourcemanager_folder_iam_member" "sa-terraform-pusher" {
-#   folder_id = var.YC_FOLDER_ID
-#   role      = "container-registry.images.pusher"
-#   member    = "serviceAccount:${yandex_iam_service_account.sa-terraform.id}"
-#   depends_on = [
-#     yandex_iam_service_account.sa-terraform,
-#   ]
-# }
-
-# resource "yandex_resourcemanager_folder_iam_member" "sa-terraform-puller" {
-#   folder_id = var.YC_FOLDER_ID
-#   role      = "container-registry.images.puller"
-#   member    = "serviceAccount:${yandex_iam_service_account.sa-terraform.id}"
-#   depends_on = [
-#     yandex_iam_service_account.sa-terraform,
-#   ]
-# }
-
 # Создаем ключи для сервисного аккаунта
 
 resource "yandex_iam_service_account_static_access_key" "sa-terraform-static-key" {
