@@ -5,7 +5,7 @@ resource "yandex_storage_bucket" "ts-bucket" {
   access_key = var.bucket_access_key
   secret_key = var.bucket_secret_key
   force_destroy = "true"
-  acl = "private"    # Делаем бакет не доступным из интернета
+  acl = "public-read"    # Делаем бакет не доступным из интернета
   max_size = 1073741824 # 1Gb
 
   server_side_encryption_configuration {
