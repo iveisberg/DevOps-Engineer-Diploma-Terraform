@@ -20,7 +20,7 @@ resource "yandex_compute_instance" "public_instance" {
   boot_disk {
     initialize_params {
       image_id = "fd8pfd17g205ujpmpb0a" # Ubuntu 24.04 LTS
-      size     = 30
+      size     = 35
       type = "network-hdd"
     }
   }
