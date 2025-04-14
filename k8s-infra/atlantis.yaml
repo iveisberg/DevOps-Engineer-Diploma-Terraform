@@ -1,6 +1,6 @@
 version: 3
 projects:
-  - name: k8s
+  - name: k8s-infra
     dir: . # Корневая директория проекта
     workspace: default
     autoplan:
