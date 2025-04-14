@@ -1,7 +1,7 @@
 # ВМ с публичным IP
 
 resource "yandex_compute_instance" "public_instance" {
-  name = "public-vm"
+  name = "public-vm-${count.index + 1}"
   zone = var.default_zone
   platform_id = var.vm_platform
   count = var.count_vm
