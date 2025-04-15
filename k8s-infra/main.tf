@@ -1,4 +1,12 @@
 # ВМ с публичным IP
+terraform {
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+    }
+  }
+  required_version = ">= 1.5"
+}
 
 resource "yandex_compute_instance" "public_instance" {
   name = "public-vm-${count.index + 1}"
