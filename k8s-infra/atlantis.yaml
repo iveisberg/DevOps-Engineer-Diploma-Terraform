@@ -4,15 +4,5 @@ projects:
     dir: . # Корневая директория проекта
     workspace: default
     autoplan:
-      enabled: true
       when_modified: ["*.tf", "../modules/**/*.tf", "*.tfvars", ".terraform.lock.hcl"]
-    workflow: terraform
-workflows:
-  terraform:
-    plan:
-      steps:
-        - init
-        - plan
-    apply:
-      steps:
-        - apply
+      enabled: true
