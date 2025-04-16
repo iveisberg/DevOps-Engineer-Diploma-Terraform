@@ -13,8 +13,8 @@ terraform {
     bucket     = "ts-bucket"
     region     = "ru-central1"
     key        = "terraform-state/terraform.tfstate"
-    access_key = "/home/red_usr/DevOps-Engineer-Diploma-Terraform/sa-terraform/output_file/secret.backend.tfvars"
-    secret_key = "/home/red_usr/DevOps-Engineer-Diploma-Terraform/sa-terraform/output_file/secret.backend.tfvars"
+    # access_key = "/home/red_usr/DevOps-Engineer-Diploma-Terraform/sa-terraform/output_file/secret.backend.tfvars"
+    # secret_key = "/home/red_usr/DevOps-Engineer-Diploma-Terraform/sa-terraform/output_file/secret.backend.tfvars"
     skip_region_validation      = true
     skip_credentials_validation = true
     skip_requesting_account_id  = true # необходимо для Terraform версии 1.6.1 и выше.

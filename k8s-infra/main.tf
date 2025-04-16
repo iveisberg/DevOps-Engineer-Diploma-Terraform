@@ -4,7 +4,7 @@ resource "yandex_compute_instance" "public_instance" {
   name = "public-vm-${count.index + 1}"
   zone = var.default_zone
   platform_id = var.vm_platform
-  count = var.count_vm
+  count = 1
 
   resources {
     cores         = var.vms_resources.vm.cores
