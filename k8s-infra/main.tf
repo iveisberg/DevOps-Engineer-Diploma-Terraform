@@ -4,7 +4,7 @@ resource "yandex_compute_instance" "public_instance" {
   name = "public-vm-${count.index + 1}"
   zone = var.default_zone
   platform_id = var.vm_platform
-  count = var.count_vm
+  count = 1
 
   resources {
     cores         = var.vms_resources.vm.cores
@@ -20,7 +20,7 @@ resource "yandex_compute_instance" "public_instance" {
   boot_disk {
     initialize_params {
       image_id = "fd8pfd17g205ujpmpb0a" # Ubuntu 24.04 LTS
-      size     = 15
+      size     = 10
       type = "network-hdd"
     }
   }
